@@ -1,0 +1,13 @@
+https://esther-liao.medium.com/how-to-get-a-linkedin-access-token-a53f9b62f0ce
+
+
+client_id = 86qf7e0lvrv671
+client_secret = rloMZ909WlnkyURJ
+
+redirect_uri = http://localhost:8000/
+
+grant_type = authorization_code
+
+https://www.linkedin.com/oauth/v2/accessToken?grant_type=authorization_code&client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&code=YOUR_AUTHORIZATION_CODE&redirect_uri=YOUR_REDIRECT_URI
+
+{"access_token":"AQX1QGovQQjBnBL5WjtMHli6_YnXuYV4m6m5uFpHykjoQakbPzwsNn6odX3aUdMaaaWQJ_8dF4tWaw7XNS7Jp3PukrVbs2K57RRxAfUykv95qFExFEaLiViJhlT_amOnj87-0ke-9fFFUGwGvhe-VKIT6O9RZjR_YM2PguDW7EIzfj_3oxnqz5FwigOVYaXBfuspb1tH7lUsCmRfDSGsTyWhmsu-_fgFri1zGw7nyUZfIdrPM3cTSzggwRA8e1a6_DOUOqDqcu0sxVhV99PTYN1wKyVsColHHuJ3a4fTFuksrYHcHgLnYCtz1RkSWBVxj_vZVl34c3uK2pd06GeDeYR9ThbX2g","expires_in":5183999}
