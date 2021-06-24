@@ -19,3 +19,5 @@ json.dump(
     indent=2,
     ensure_ascii=False
 )
+
+# todo refactor

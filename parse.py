@@ -35,7 +35,7 @@ def search(age, sex=0):
     print(f'{age=} {sex=}')
 
 
-def search_process():
+def parse():
     # n = 17304    # НИУ ВШЭ НН  # todo НИУ ВШЭ НН ФиПЛ, НИУ ВШЭ (Москва), НИУ ВШЭ Москва ФиКЛ
     ages = (
         (0, 19),    # 782
