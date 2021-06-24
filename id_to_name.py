@@ -10,7 +10,7 @@ def transform(id):
     api = vk.API(session)
     res = api.groups.getById(
         access_token=TOKEN,
-        group_id=24011636,
+        group_id=id,
         v=5.131
     )
     return res['name']
