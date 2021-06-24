@@ -4,7 +4,7 @@ import time
 import vk
 
 
-TOKEN = json.load(open('token.json'))['access_token']
+TOKEN = json.load(open('token.json', encoding='utf-8'))['access_token']
 
 
 def search(age, sex=0):
@@ -22,15 +22,20 @@ def search(age, sex=0):
         v=5.131
     )
 
-    data = json.load(open('users.json', 'r'))
+    data = json.load(open('users.json', 'r', encoding='utf-8'))
     data['count'] += res['count']
     data['items'].extend(res['items'])
-    json.dump(data, open('users.json', 'w'), indent=2)
+    json.dump(
+        data,
+        open('users.json', 'w', encoding='utf-8'),
+        indent=2,
+        ensure_ascii=False
+    )
 
     print(f'{age=} {sex=}')
 
 
-def main():
+def search_process():
     # n = 17304    # НИУ ВШЭ НН  # todo НИУ ВШЭ НН ФиПЛ, НИУ ВШЭ (Москва), НИУ ВШЭ Москва ФиКЛ
     ages = (
         (0, 19),    # 782
@@ -58,18 +63,21 @@ def main():
     )
 
     data = {'count': 0, 'items': []}
-    json.dump(data, open('users.json', 'w'), indent=2)
+    json.dump(
+        data,
+        open('users.json', 'w', encoding='utf-8'),
+        indent=2,
+        ensure_ascii=False
+    )
 
     for age in ages:
         time.sleep(2)
-
         if age == (119, 119):
             search(age, sex=1)
             search(age, sex=2)
-
         else:
             search(age)
 
 
 if __name__ == '__main__':
-    main()
+    search_process()
