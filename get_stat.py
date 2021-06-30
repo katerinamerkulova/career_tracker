@@ -15,7 +15,7 @@ pprint(stat)
 
 json.dump(
     stat,
-    open('career_stat.json', 'w', encoding='utf-8'),
+    open('career_id.json', 'w', encoding='utf-8'),
     indent=2,
     ensure_ascii=False
 )
